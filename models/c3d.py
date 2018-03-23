@@ -43,10 +43,10 @@ class C3D(nn.Module):
         self.pool5 = nn.MaxPool3d(kernel_size=(2, 2, 2), stride=(2, 2, 2), padding=(0, 1, 1))
 
         self.fc6 = nn.Linear(8192, 512)
-        self.bn6 = nn.BatchNorm3d(512)
+        self.bn6 = nn.BatchNorm2d(512)
 
         self.fc7 = nn.Linear(512*4, 1024)
-        self.bn7 = nn.BatchNorm3d(1024)
+        self.bn7 = nn.BatchNorm2d(1024)
         self.fc8 = nn.Linear(1024, self.nClasses)
 
         self.dropout = nn.Dropout(p=0.3)
