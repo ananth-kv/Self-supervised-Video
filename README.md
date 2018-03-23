@@ -1,36 +1,13 @@
-# 3D ResNets for Action Recognition
+# UMBC-Verisk Collab
 
-## Update (2018/2/21)
+"Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?"
 
-Our paper "Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?" is accepted to CVPR2018!  
-We update the paper information.
-
-## Update (2018/01/16)
-
-We uploaded some of fine-tuned models on UCF-101 and HMDB-51.
+some of fine-tuned models on UCF-101 and HMDB-51.
 
 * ResNeXt-101 fine-tuned on UCF-101 (split1)
 * ResNeXt-101 (64 frame inputs) fine-tuned on UCF-101 (split1)
 * ResNeXt-101 fine-tuned on HMDB-51 (split1)
 * ResNeXt-101 (64 frame inputs) fine-tuned on HMDB-51 (split1)
-
-## Update (2017/11/27)
-
-We published [a new paper](https://arxiv.org/abs/1711.09577) on arXiv.  
-We also added the following new models and their Kinetics pretrained models in this repository.  
-
-* ResNet-50, 101, 152, 200
-* Pre-activation ResNet-200
-* Wide ResNet-50
-* ResNeXt-101
-* DenseNet-121, 201
-
-In addition, we supported new datasets (UCF-101 and HDMB-51) and fine-tuning functions.
-
-Some minor changes are included.
-
-* Outputs are normalized by softmax in test.
-  * If you do not want to perform the normalization, please use ```--no_softmax_in_test``` option.
 
 ## Summary
 
