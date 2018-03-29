@@ -26,7 +26,6 @@ wheels/
 *.egg
 *.log
 results/
-datasets/
 .idea/
 
 # PyInstaller

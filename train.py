@@ -24,6 +24,7 @@ def train_epoch(epoch, data_loader, model, criterion, optimizer, opt,
 
         if not opt.no_cuda:
             targets = targets.cuda(async=True)
+
         inputs = Variable(torch.FloatTensor(inputs))
         targets = Variable(targets)
         outputs = model(inputs)
@@ -81,4 +82,4 @@ def train_epoch(epoch, data_loader, model, criterion, optimizer, opt,
             'state_dict': model.state_dict(),
             'optimizer': optimizer.state_dict(),
         }
-        torch.save(states, save_file_path)
+        #torch.save(states, save_file_path)

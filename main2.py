@@ -54,6 +54,10 @@ if __name__ == '__main__':
 
     torch.manual_seed(opt.manual_seed)
 
+    #import os
+    #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+    #os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
     model, parameters = generate_model(opt)
     print(model)
     criterion = nn.CrossEntropyLoss()
@@ -113,8 +117,8 @@ if __name__ == '__main__':
             lr=0.01,
             weight_decay=opt.weight_decay)
 
-        scheduler = lr_scheduler.ReduceLROnPlateau(
-            optimizer, 'min', patience=opt.lr_patience)
+        #scheduler = lr_scheduler.ReduceLROnPlateau(
+         #   optimizer, 'min', patience=opt.lr_patience)
 
     if not opt.no_val:
         spatial_transform = Compose([
